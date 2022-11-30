@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conversion_rates_navigation"
+    tools:ignore="InvalidNavigation">
+
+    <fragment
+        android:id="@+id/exchange_rates_fragment"
+        android:name="com.test.conversion.ui.main.view.CurrencyExchangeFragment"
+        tools:layout="@layout/fragment_exchange_currency" />
+
+    <fragment
+        android:id="@+id/exchange_confirmation_fragment"
+        android:name="com.test.conversion.ui.main.view.ExchangeConfirmationFragment"
+        tools:layout="@layout/fragment_exchange_confirmation">
+        <argument
+            android:name="conversionFrom"
+            app:argType="string" />
+        <argument
+            android:name="conversionTo"
+            app:argType="string" />
+
+        <argument
+            android:name="conversionRate"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/conversion_success_fragment"
+        android:name="com.test.conversion.ui.main.view.ExchangeSuccessFragment"
+        tools:layout="@layout/fragment_exchange_success">
+        <argument
+            android:name="conversionTo"
+            app:argType="string" />
+
+        <argument
+            android:name="conversionRate"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

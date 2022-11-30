@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Exchange</string>
+    <string name="approval_required">Approval Required</string>
+    <string name="approval_description">You\'re about to get %s for %s, Do you approve this transaction?</string>
+    <string name="cancel">Cancel</string>
+    <string name="approve">Approve</string>
+    <string name="timer_in_sec">%d sec left</string>
+    <string name="calculate">Calculate</string>
+    <string name="conversion_success_message">"Great now you have %s in your account"</string>
+    <string name="conversion_rate">"Your conversion rate was: %s"</string>
+</resources>
