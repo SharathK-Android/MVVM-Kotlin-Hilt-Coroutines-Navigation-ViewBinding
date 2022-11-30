@@ -34,6 +34,12 @@ android {
     buildFeatures {
         viewBinding true
     }
+    
+    task wrapper(type: Wrapper){
+        gradleVersion = '7.4'
+    }
+
+    tasks.register("prepareKotlinBuildScriptModel"){}
 }
 
 dependencies {
