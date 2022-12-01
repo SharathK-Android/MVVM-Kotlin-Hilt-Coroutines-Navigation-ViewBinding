@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.test.conversion.databinding.FragmentExchangeCurrencyBinding
@@ -17,18 +17,15 @@ import com.test.conversion.ui.main.CONVERSION_RATE
 import com.test.conversion.ui.main.CONVERSION_TO
 import com.test.conversion.ui.main.SPACE
 import com.test.conversion.ui.main.viewmodel.ExchangeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class CurrencyExchangeFragment : Fragment() {
 
-    private lateinit var viewModel: ExchangeViewModel
+    private val viewModel: ExchangeViewModel by viewModels()
     private lateinit var binding: FragmentExchangeCurrencyBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this)[ExchangeViewModel::class.java]
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

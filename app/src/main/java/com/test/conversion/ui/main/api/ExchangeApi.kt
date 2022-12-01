@@ -5,6 +5,7 @@ import com.test.conversion.ui.main.model.Currencies
 import retrofit2.http.GET
 import retrofit2.http.Path
 
+const val BASE_URL = "https://v6.exchangerate-api.com/v6/"
 interface ExchangeApi {
 
     @GET("codes")

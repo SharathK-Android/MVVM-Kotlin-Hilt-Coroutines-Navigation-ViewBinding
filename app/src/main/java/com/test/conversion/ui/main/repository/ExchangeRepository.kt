@@ -1,14 +1,16 @@
 package com.test.conversion.ui.main.repository
 
-import com.test.conversion.ui.main.api.ApiBuilder.exchangeApi
+import com.test.conversion.ui.main.api.ExchangeApi
 import com.test.conversion.ui.main.model.ConversionResult
 import com.test.conversion.ui.main.model.Currencies
 import com.test.conversion.ui.main.util.PreferenceManager
 import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
-class ExchangeRepository {
-
-    private val preferenceManager = PreferenceManager()
+class ExchangeRepository @Inject constructor(
+    private val exchangeApi: ExchangeApi,
+    private val preferenceManager: PreferenceManager
+) {
 
     suspend fun getCurrencies(): Currencies {
         var currencyData: Currencies? = preferenceManager.fetchCurrencies()

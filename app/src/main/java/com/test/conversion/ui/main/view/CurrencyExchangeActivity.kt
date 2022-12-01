@@ -7,7 +7,9 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
 import com.test.conversion.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CurrencyExchangeActivity : AppCompatActivity() {
 
     private lateinit var navGraph: NavGraph
