@@ -56,7 +56,7 @@ class ExchangeConfirmationFragment : Fragment() {
                 dialogInterface?.dismiss()
             }?.setNegativeButton(getString(R.string.approve)) { _, _ ->
                 findNavController().navigate(
-                    R.id.conversion_success_fragment, bundleOf(
+                    R.id.action_navigate_success_screen, bundleOf(
                         CONVERSION_TO to conversionTo,
                         CONVERSION_RATE to conversionRate
                     )
